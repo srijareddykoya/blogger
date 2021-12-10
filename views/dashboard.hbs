@@ -1,0 +1,36 @@
+<h4 id="heading" class="center">Dashboard</h4>
+<h5>Welcome {{name}}</h5>
+<p class="lead">Here are your blogs:</p>
+{{#if blogs}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Created At</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each blogs}}
+        <tr>
+            <td><a href="/{{_id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td>{{status}}</td>
+            <td>
+                <a href="/edit/{{_id}}" class="btn blue edit-btn">
+                    <i class="fas fa-user-edit"></i>
+                </a>
+                <form method="POST" action="/{{_id}}" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn red delete-btn" type="submit"><i class="fas fa-trash-alt"></i></button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{else}}
+<p>You have no blogs. Please click the add button to add a blog.</p>
+{{/if}}

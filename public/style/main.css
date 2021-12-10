@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
+.box-content {
+  max-width: 400px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.left {
+  float: left;
+  margin-right: 10px;
+}
+.logo {
+  font-weight: darker;
+  margin-left: 20px;
+}
+
+ul li a {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#cancel {
+  margin-left: 10px;
+}
+.blogs {
+  margin-top: 20px;
+}
+
+#chip-top {
+  margin-top: 20px;
+}
+
+#chip {
+  float: right;
+}
+
+.public-heading {
+  float: left;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.edit-btn {
+  float: left;
+  margin-right: 10px;
+}
+
+.divider {
+  margin-bottom: 20px;
+}
+
+.card-content {
+  font-size: 17px;
+}
+
+.show-edit {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.alert {
+  color: #fff;
+  width: 40%;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#alert-dismissal {
+  float: right;
+  color: #fff;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#searchForm {
+  width: 50%;
+  margin: 20px auto;
+}
+
+#heading {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#fromNow {
+  font-size: small;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#card-content {
+  margin: 10px;
+}
+
+.read-more-btn {
+  font-weight: 600;
+}
+
+#login-image {
+  width: 80%;
+  margin: auto;
+  padding-top: 10%;
+}
+
+#login-heading {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 2.3em;
+}
+
+#login-card {
+  border-radius: 25px !important;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgb(206, 202, 202);
+}
+
+#comment-heading {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 848px) {
+  .edit-btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}

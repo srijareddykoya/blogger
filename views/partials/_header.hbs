@@ -1,0 +1,58 @@
+<nav class="navbar-image">
+  <div class="image"></div>
+  <div class='nav-wrapper'>
+    <a href='/' class='brand-logo logo'>Blogger</a>
+    <a href='#' data-target='mobile-demo' class='sidenav-trigger'>
+      <i class='fas fa-bars'></i>
+    </a>
+    <ul class='right hide-on-med-and-down'>
+      <li><a href='/index/dashboard'>Dashboard</a></li>
+      <li><a href='/'>Public Blogs</a></li>
+      <li><a href='/index/contact'>Contact us</a></li>
+      {{#if user}}
+      <li class='signout'><a href='/auth/signout'>
+          sign out
+        </a></li>
+      {{else}}
+      <li class='signin'><a href='/index/login'>
+          Sign In
+        </a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+
+<ul class='sidenav' id='mobile-demo'>
+  <li><a href='/index/dashboard'>Dashboard</a></li>
+  <li><a href='/'>Public Blogs</a></li>
+  <li><a href='/index/contact'>Contact us</a></li>
+  {{#if user}}
+  <li class='signout'><a href='/auth/signout'>
+      Sign out
+    </a></li>
+  {{else}}
+  <li class='signin'><a href='/index/login'>
+      Sign In
+    </a></li>
+
+  {{/if}}
+</ul>
+<style>
+  nav {
+    position: relative;
+    z-index: 10;
+    background-color: rgb(181, 101, 87);
+    font-weight: bolder;
+  }
+
+  .image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url('/images/navbar.png');
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    backdrop-filter: (100%);
+  }
+</style>

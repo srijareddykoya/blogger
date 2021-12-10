@@ -1,0 +1,37 @@
+{{#if success_msg}}
+<div class="alert green lighten-1">
+    {{success_msg}}
+    <a id="alert-dismissal"><i class="fas fa-times"></i></a>
+</div>
+{{/if}}
+
+{{#if warning_msg}}
+<div class="alert amber accent-4">
+    {{warning_msg}}
+    <a id="alert-dismissal"><i class="fas fa-times"></i></a>
+</div>
+{{/if}}
+
+{{#if error_msg}}
+<div class="alert red lighten-1">
+    {{error_msg}}
+    <a id="alert-dismissal"><i class="fas fa-times"></i></a>
+</div>
+{{/if}}
+<script>
+    function clearAlert() {
+        let currentAlert = document.querySelector('.alert')
+        if (currentAlert) {
+            currentAlert.remove()
+        }
+    }
+
+    setTimeout(() => {
+        clearAlert()
+    }, 3000)
+
+    document.querySelector('#alert-dismissal').addEventListener('click', (e) => {
+        e.preventDefault()
+        document.querySelector('div.alert').remove()
+    })
+</script>
